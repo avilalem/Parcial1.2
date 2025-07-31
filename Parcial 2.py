@@ -62,8 +62,7 @@ def menu():
             n = int(input("Ingresa un numero: "))
             binario=str(decimal_binario(n))
             invertido=invertir(binario)
-            print(invertido)
-            print(f"Binario: {decimal_binario(n)}")
+            print(f"Binario: {invertido)}")
         elif opcion == 5:
             n = int(input("Ingresa un numero: "))
             print(f"El numero tiene {contar_digitos(n)} digitos")
