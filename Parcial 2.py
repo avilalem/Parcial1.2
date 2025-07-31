@@ -23,6 +23,11 @@ def decimal_binario(n):
         return "1"
     else:
         return decimal_binario(n%2)+decimal_binario(n//2)
+def invertir (texto):
+    if texto=="":
+        return ""
+    else:
+        return invertir(texto[1:])+texto[0]
 
 def contar_digitos(n):
     if 0 <= n <= 9:
@@ -55,6 +60,9 @@ def menu():
             print(f"La letra aparece: {contar_letras(palabra, letra)} veces en la palabra")
         elif opcion == 4:
             n = int(input("Ingresa un numero: "))
+            binario=str(decimal_binario(n))
+            invertido=invertir(binario)
+            print(invertido)
             print(f"Binario: {decimal_binario(n)}")
         elif opcion == 5:
             n = int(input("Ingresa un numero: "))
